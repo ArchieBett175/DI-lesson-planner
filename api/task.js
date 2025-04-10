@@ -9,14 +9,14 @@ import {
 
 import crypto from "crypto";
 
-const client = new DynamoDBClient({ region: "eu-west-2" });
-const docClient = DynamoDBDocumentClient.from(client);
+const client = new DynamoDBClient({ region: "eu-north-1" });
+const docClient = new DynamoDBDocumentClient.from(client);
 
 export const fetchTasks = async () => {
   const command = new ScanCommand({
     ExpressionAttributeNames: { "#name": "name" },
     ProjectionExpression: "id, #name, completed",
-    TableName: "Forms",
+    TableName: "Tasks",
   });
 
   const response = await docClient.send(command);

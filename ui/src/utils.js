@@ -1,1 +1,1 @@
-export const API_URL = "http://localhost:3001/";
+export const API_URL = "https://il27iiqxfjzx3eghx5n2tbvqlq0pmgfr.lambda-url.eu-north-1.on.aws/task";
